@@ -61,36 +61,7 @@
   .script { font-family: "Dancing Script", "Segoe Script", "Brush Script MT", cursive; }
 
   /* Kopfbereich */
-  header.hero {
-    padding: 28px 20px 18px;
-    text-align: center;
-    border-bottom: 3px double var(--line);
-  }
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    color: var(--red);
-  }
-  .sun {
-    width: 34px; height: 34px; border-radius: 50%;
-    background: var(--red);
-    flex: none;
-  }
-  .logo {
-    height: 78px; width: auto; flex: none;
-    background: #fffbee; border-radius: 14px; padding: 7px 9px;
-    box-shadow: 0 0 0 1.5px var(--line);
-  }
-  @media (max-width: 420px) { .logo { height: 68px; } }
-  .brand .name { font-size: 46px; line-height: 1; font-weight: 700; }
-  .brand-sub { margin: 4px 0 0; color: var(--green); font-size: 14px; letter-spacing: .02em; }
-  h1 {
-    margin: 14px 0 0;
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--ink);
-  }
+ 
   .search-wrap { max-width: 520px; margin: 16px auto 0; }
   input[type="search"] {
     width: 100%;
@@ -263,7 +234,7 @@
   }
 
   @media (max-width: 420px) {
-    .brand .name { font-size: 40px; }
+   
     h1 { font-size: 26px; }
     section.tab > h2 { font-size: 32px; }
     .prices .val { min-width: 56px; }
