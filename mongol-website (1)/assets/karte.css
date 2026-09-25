@@ -60,8 +60,6 @@
   }
   .script { font-family: "Dancing Script", "Segoe Script", "Brush Script MT", cursive; }
 
-  /* Kopfbereich */
- 
   .search-wrap { max-width: 520px; margin: 16px auto 0; }
   input[type="search"] {
     width: 100%;
@@ -234,7 +232,6 @@
   }
 
   @media (max-width: 420px) {
-   
     h1 { font-size: 26px; }
     section.tab > h2 { font-size: 32px; }
     .prices .val { min-width: 56px; }
