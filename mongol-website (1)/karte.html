@@ -379,17 +379,17 @@
       chips.appendChild(a);
     });
 
-    if (!("IntersectionObserver" in window)) return;
-    observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        chips.querySelectorAll(".chip").forEach(function (c) {
-          var on = c.dataset.target === en.target.id;
-          c.classList.toggle("on", on);
-          if (on) {
-            var left = c.offsetLeft - chips.clientWidth / 2 + c.clientWidth / 2;
-            chips.scrollTo({ left: left, behavior: "smooth" });
-          }
+    if (on) {
+  var idx = Array.prototype.indexOf.call(chips.children, c);
+  var left;
+  if (idx === 0) {
+    left = 0;
+  } else {
+    left = c.offsetLeft - chips.clientWidth / 2 + c.clientWidth / 2;
+    left = Math.max(0, Math.min(left, chips.scrollWidth - chips.clientWidth));
+  }
+  chips.scrollTo({ left: left, behavior: "smooth" });
+}
         });
       });
     }, { rootMargin: "-25% 0px -65% 0px" });
